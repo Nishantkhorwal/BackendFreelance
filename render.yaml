@@ -1,0 +1,7 @@
+services:
+  - name: api
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    env:
+      - key: MONGO
+        fromSecret: true
