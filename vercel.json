@@ -1,15 +1,24 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "index.js",
-            "use": "@vercel/node"
-        }
+      {
+        "src": "backendFreelance/api/index.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "index.js"
-        }
-    ]
-}
+      {
+        "src": "/api/(.*)",
+        "dest": "backendFreelance/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "backendFreelance/api/index.js"
+      }
+    ],
+    "env": {
+      "MONGO": "mongodb+srv://Nishant:kingkohli2016@travel.h5ahcs0.mongodb.net/",
+      "PORT": 3000
+    }
+  }
+  
