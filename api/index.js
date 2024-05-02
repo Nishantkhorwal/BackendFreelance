@@ -7,9 +7,9 @@ import cors from 'cors';
 import contactRoutes from './routes/contact.route.js'
 import quoteRoutes from './routes/quote.route.js'
 
-
+const PORT = process.env.PORT || 3000;
 mongoose
-  .connect(process.env.MONGO)
+  .connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
 
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server listening on port 3000!');
 });
 
