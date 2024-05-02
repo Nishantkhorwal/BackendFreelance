@@ -18,7 +18,7 @@
     ],
     "env": {
       "MONGO": "mongodb+srv://Nishant:kingkohli2016@travel.h5ahcs0.mongodb.net/",
-      "PORT": 3000
+      "PORT": "3000"
     }
   }
   
